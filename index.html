@@ -107,7 +107,7 @@
 
 </style><style id="premium-v6">
 /* =========================================================
-   Origin HeartGold Companion v6.1 — premium visual system
+   Origin HeartGold Companion v6.4 — premium visual system
    Data density + navigation behaviour intentionally preserved.
    ========================================================= */
 :root{
@@ -649,8 +649,97 @@ html,body{width:100%;max-width:100%;overflow:hidden}
   .section-body{padding:4px!important}
 }
 </style>
+
+<style id="locations-density-v6-4">
+/* v6.4 — dense encounter board */
+.encounter-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  grid-auto-flow:row dense;
+  gap:3px!important;
+  align-items:start;
+}
+.method-table{
+  margin:0!important;
+  min-width:0;
+  border:1px solid #263847;
+  background:#0c141c;
+  overflow:hidden;
+}
+.method-title{
+  height:19px!important;
+  min-height:19px;
+  margin:0!important;
+  padding:1px 4px!important;
+  border:0!important;
+  border-bottom:1px solid #334656!important;
+  display:flex!important;
+  align-items:center;
+  justify-content:space-between;
+  gap:4px;
+  font-size:7.6px!important;
+  letter-spacing:.045em!important;
+  line-height:1!important;
+  background:#111b24!important;
+  box-shadow:inset 2px 0 0 var(--enc-accent,#c69c3a);
+}
+.method-title:before{display:none!important}
+.method-title-main{display:flex;align-items:center;gap:4px;min-width:0;white-space:nowrap;overflow:hidden}
+.method-title-label{overflow:hidden;text-overflow:ellipsis}
+.method-title small{font-size:6.5px!important;color:#7f91a1!important;flex:0 0 auto}
+.enc-method-icon{
+  width:15px;height:15px;flex:0 0 15px;border-radius:50%;display:grid;place-items:center;
+  color:#fff;background:color-mix(in srgb,var(--enc-accent,#708090) 68%,#0a1118);
+  border:1px solid color-mix(in srgb,var(--enc-accent,#708090) 80%,#dbe7f0 20%);
+}
+.enc-method-icon svg{width:10px;height:10px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.enc-kind-grass{--enc-accent:#67b94f}.enc-kind-water{--enc-accent:#4e9de3}.enc-kind-fishing{--enc-accent:#42b7d8}
+.enc-kind-rock{--enc-accent:#8795a2}.enc-kind-headbutt{--enc-accent:#a87949}.enc-kind-radio{--enc-accent:#9a6bd2}
+.enc-kind-swarm{--enc-accent:#d2a83f}.enc-kind-special{--enc-accent:#6f8090}
+.enc-kind-grass .method-title{background:linear-gradient(90deg,rgba(103,185,79,.13),#111b24 38%)!important}
+.enc-kind-water .method-title,.enc-kind-fishing .method-title{background:linear-gradient(90deg,rgba(78,157,227,.15),#111b24 40%)!important}
+.enc-kind-rock .method-title{background:linear-gradient(90deg,rgba(135,149,162,.14),#111b24 40%)!important}
+.enc-kind-headbutt .method-title{background:linear-gradient(90deg,rgba(168,121,73,.15),#111b24 40%)!important}
+.enc-kind-radio .method-title{background:linear-gradient(90deg,rgba(154,107,210,.15),#111b24 40%)!important}
+.enc-kind-swarm .method-title{background:linear-gradient(90deg,rgba(210,168,63,.15),#111b24 40%)!important}
+
+.encounter-table{table-layout:fixed!important}
+.encounter-table th,.encounter-table td{padding:0 3px!important;height:20px!important;line-height:1!important}
+.encounter-table thead tr{height:15px!important}
+.encounter-table th{height:15px!important;font-size:6.5px!important;letter-spacing:.055em}
+.encounter-table tbody tr{height:20px!important}
+.encounter-table .table-sprite{width:18px!important;height:18px!important;flex:0 0 18px}
+.encounter-table .moncell{gap:2px!important;min-width:0!important;width:100%;overflow:hidden;white-space:nowrap}
+.encounter-table .moncell .linkbtn{font-size:7.4px!important;line-height:1!important;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;max-width:100%}
+.encounter-table .chance{width:33px!important;font-size:7.2px!important;padding-right:3px!important}
+.encounter-table .level{width:36px!important;font-size:7.2px!important}
+
+/* Keep the most useful methods visually first and let the board use the full pane. */
+#locDetail .detail-inner{max-width:none!important}
+#locDetail .section-body{overflow:hidden}
+#locDetail .method-tabs{margin-bottom:3px!important}
+
+@media(min-width:1400px){
+  .encounter-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+}
+@media(max-width:1050px) and (orientation:landscape){
+  .encounter-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .encounter-table th,.encounter-table td{padding:0 2px!important}
+  .encounter-table .table-sprite{width:16px!important;height:16px!important;flex-basis:16px}
+  .encounter-table .moncell .linkbtn{font-size:7px!important}
+  .encounter-table tbody tr{height:18px!important}
+  .encounter-table th,.encounter-table td{height:18px!important}
+}
+@media(max-width:700px) and (orientation:portrait){
+  .encounter-grid{grid-template-columns:1fr!important}
+  .encounter-table .table-sprite{width:22px!important;height:22px!important;flex-basis:22px}
+  .encounter-table tbody tr{height:24px!important}
+  .encounter-table th,.encounter-table td{height:24px!important}
+  .encounter-table .moncell .linkbtn{font-size:8.5px!important}
+}
+</style>
 </head><body>
-<header class="top" id="top"><div class="wrap"><div class="titlebar"><div class="brand-lockup"><span class="brand-mark" aria-hidden="true"></span><div class="brand-copy"><h1>Origin HeartGold <span class="brand-sub">Companion</span><span class="version-chip">v6.3</span></h1><p>Pokédex · encounters · trainers · moves · items · battle reference</p></div></div></div><nav class="tabs" id="tabs"><button class="tab active" data-tab="dex">Pokédex</button><button class="tab" data-tab="locations">Locations</button><button class="tab" data-tab="trainers">Trainers</button><button class="tab" data-tab="moves">Moves</button><button class="tab" data-tab="items">Items</button><button class="tab" data-tab="tutors">Tutors & trades</button><button class="tab" data-tab="team">Team</button></nav></div></header>
+<header class="top" id="top"><div class="wrap"><div class="titlebar"><div class="brand-lockup"><span class="brand-mark" aria-hidden="true"></span><div class="brand-copy"><h1>Origin HeartGold <span class="brand-sub">Companion</span><span class="version-chip">v6.4</span></h1><p>Pokédex · encounters · trainers · moves · items · battle reference</p></div></div></div><nav class="tabs" id="tabs"><button class="tab active" data-tab="dex">Pokédex</button><button class="tab" data-tab="locations">Locations</button><button class="tab" data-tab="trainers">Trainers</button><button class="tab" data-tab="moves">Moves</button><button class="tab" data-tab="items">Items</button><button class="tab" data-tab="tutors">Tutors & trades</button><button class="tab" data-tab="team">Team</button></nav></div></header>
 <main class="wrap" id="main">
 <section class="panel active" id="panel-dex"><div class="split" id="split-dex"><aside class="master"><div class="master-head"><h2>Pokédex</h2><input class="search" id="dexSearch" placeholder="Search Pokémon, ability or #"><div class="hscroll" id="dexMode"><button class="viewbtn active" data-mode="stats">Stats</button><button class="viewbtn" data-mode="buffs">Buff filters</button></div><div class="hscroll" id="dexSort"><button class="sortbtn active" data-sort="num">ID</button><button class="sortbtn" data-sort="hp">HP</button><button class="sortbtn" data-sort="atk">Atk</button><button class="sortbtn" data-sort="def">Def</button><button class="sortbtn" data-sort="spa">SpA</button><button class="sortbtn" data-sort="spd">SpD</button><button class="sortbtn" data-sort="spe">Spe</button><button class="sortbtn" data-sort="bst">BST</button></div><details class="filters"><summary>Filters</summary><div class="filter-grid"><select class="control" id="dexType"><option value="">All types</option></select><select class="control" id="dexGen"><option value="">All gens</option><option value="1">Gen I</option><option value="2">Gen II</option><option value="3">Gen III</option><option value="4">Gen IV</option><option value="5">Gen V</option><option value="6">Gen VI</option><option value="7">Gen VII</option><option value="8">Gen VIII</option><option value="9">Gen IX</option></select><select class="control" id="dexForms"><option value="">Base + forms</option><option value="base">Base species</option><option value="forms">Forms only</option></select><select class="control" id="dexSource"><option value="">All entries</option><option value="yes">Obtainable</option><option value="no">No known source</option></select><select class="control" id="buffFilter"><option value="all">All compared</option><option value="changed">Any stat changed</option><option value="up">BST buffed</option><option value="down">BST nerfed</option></select></div></details><div class="master-summary"><span id="dexCount"></span><span id="dexSorted"></span></div></div><div class="master-list" id="dexList"></div></aside><article class="detail" id="dexDetail"></article></div></section>
 <section class="panel" id="panel-locations"><div class="split" id="split-locations"><aside class="master"><div class="master-head"><h2>Locations</h2><input class="search" id="locSearch" placeholder="Search route, town, cave or Pokémon"><details class="filters"><summary>Filters</summary><div class="filter-grid"><select class="control" id="locRegion"><option value="">All regions</option><option>Kanto</option><option>Johto</option><option>Special</option><option>Other</option></select><select class="control" id="locKind"><option value="">All locations</option><option>Route</option><option>City / town</option><option>Cave / dungeon</option><option>Landmark</option><option>Other</option></select></div></details><div class="master-summary"><span id="locCount"></span><span>story order</span></div></div><div class="master-list" id="locList"></div></aside><article class="detail" id="locDetail"></article></div></section>
@@ -794,7 +883,29 @@ function locationPokemonNames(l){const s=new Set();for(const e of l.encounters||
 function applyLocations(){const q=$('#locSearch').value.trim().toLowerCase(),r=$('#locRegion').value,k=$('#locKind').value;locView=LOCATIONS.filter(l=>{if(r&&l.region!==r)return false;if(k&&l.kind!==k)return false;const hay=`${l.name} ${locationPokemonNames(l).join(' ')}`.toLowerCase();return !q||hay.includes(q)});$('#locCount').textContent=locView.length+' locations';$('#locList').innerHTML=locView.map(l=>`<button class="master-row location-row ${selection.locations===l.name?'selected':''}" data-location="${esc(l.name)}"><span><span class="row-name">${esc(l.name)}</span><span class="row-sub">${esc(l.region)} • ${esc(l.kind)}</span></span><span class="row-metric"><b>${l.wildCount}</b>wild${l.items?.length?`<br>${l.items.length} items`:''}</span></button>`).join('')||'<div class="empty">No locations match.</div>'}
 function methodBucket(method){const m=String(method).toLowerCase();if(m.includes('morning'))return'morning';if(m.includes('night'))return'night';if(m.includes('day'))return'day';return'other'}
 function encounterPriority(method){const m=String(method).toLowerCase();let p=90;if(m.includes('grass')||m.includes('cave'))p=0;else if(m.includes('surf'))p=20;else if(m.includes('old rod'))p=30;else if(m.includes('good rod'))p=31;else if(m.includes('super rod'))p=32;else if(m.includes('rock smash'))p=40;else if(m.includes('headbutt'))p=50;else if(m.includes('swarm'))p=60;else if(m.includes('sound'))p=61;const t=methodBucket(method);return p+(t==='morning'?0:t==='day'?1:t==='night'?2:3)}
-function encounterTables(l){const groups=(l.encounters||[]).filter(e=>locState.time==='all'||methodBucket(e.method)===locState.time).slice().sort((a,b)=>encounterPriority(a.method)-encounterPriority(b.method)||String(a.method).localeCompare(String(b.method)));if(!groups.length)return'<div class="empty">No encounter tables in this view.</div>';return `<div class="encounter-grid">${groups.map(e=>`<div class="method-table"><div class="method-title"><span>${esc(e.method)}</span><small>${(e.rows||[]).length}</small></div><table class="dense-table encounter-table"><thead><tr><th class="chance">%</th><th>Pokémon</th><th class="level">Lv.</th></tr></thead><tbody>${(e.rows||[]).map(r=>{const p=findPokemonByName(r['Pokémon']);return `<tr><td class="chance">${esc(r.Chance||'—')}</td><td><div class="moncell">${p?spriteHtml(p.baseName,p.baseDex,'table-sprite'):''}${monButton(r['Pokémon'])}</div></td><td class="level">${esc(r.Level||'—')}</td></tr>`}).join('')}</tbody></table></div>`).join('')}</div>`}
+function encounterMethodVisual(method){
+ const raw=String(method||''),m=raw.toLowerCase();
+ const svg={
+  grass:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20c1-6 3-10 7-15M11 20c0-5 2-9 7-13M12 14c-3-1-5-3-6-6M14 12c3-1 5-3 6-6"/></svg>',
+  water:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14c2-2 4-2 6 0s4 2 6 0 4-2 6 0M3 19c2-2 4-2 6 0s4 2 6 0 4-2 6 0M7 9c2-2 3-4 5-7 2 3 3 5 5 7"/></svg>',
+  fishing:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l9 9M5 3l-2 6M14 12c3 0 5 2 5 5v1M19 18c0 2-1 3-3 3-1.5 0-2.5-1-2.5-2.5"/></svg>',
+  rock:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18l2-9 6-4 6 5-1 8zM12 7l-1 5 4 1-3 5"/></svg>',
+  tree:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-7M8 21h8M7 14a4 4 0 0 1 1-8 5 5 0 0 1 9 2 3.5 3.5 0 0 1-1 6z"/></svg>',
+  radio:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12v11H6zM9 5l6-3M9 12h6M9 15h3"/></svg>',
+  swarm:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9v8M9 12h6M8 8l-3-3M16 8l3-3M8 16l-3 3M16 16l3 3"/><circle cx="12" cy="12" r="3"/></svg>',
+  special:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.5 5.5L19 10l-5.5 1.5L12 17l-1.5-5.5L5 10l5.5-1.5z"/></svg>'
+ };
+ let kind='special',icon=svg.special,label=raw;
+ if(m.includes('grass')||m.includes('cave')){kind='grass';icon=svg.grass;label=m.includes('morning')?'Grass · Morning':m.includes('day')?'Grass · Day':m.includes('night')?'Grass · Night':'Grass / cave'}
+ else if(m.includes('surf')){kind='water';icon=svg.water;label=m.includes('swarm')?'Surf · Swarm':'Surfing'}
+ else if(m.includes('rod')||m.includes('fishing')){kind='fishing';icon=svg.fishing;label=m.includes('old rod')?'Old Rod':m.includes('good rod')?'Good Rod':m.includes('super rod')?'Super Rod':m.includes('swarm')?'Fishing · Swarm':m.includes('night')?'Fishing · Night':'Fishing'}
+ else if(m.includes('rock smash')){kind='rock';icon=svg.rock;label='Rock Smash'}
+ else if(m.includes('headbutt')){kind='headbutt';icon=svg.tree;label=m.includes('rare')?'Headbutt · Rare':m.includes('special')?'Headbutt · Special':'Headbutt · Common'}
+ else if(m.includes('sound')){kind='radio';icon=svg.radio;label=m.includes('hoenn')?'Hoenn Sound':'Sinnoh Sound'}
+ else if(m.includes('swarm')){kind='swarm';icon=svg.swarm;label=raw.replace(/\s*\([^)]*\)/g,'')}
+ return {kind,icon,label};
+}
+function encounterTables(l){const groups=(l.encounters||[]).filter(e=>locState.time==='all'||methodBucket(e.method)===locState.time).slice().sort((a,b)=>encounterPriority(a.method)-encounterPriority(b.method)||String(a.method).localeCompare(String(b.method)));if(!groups.length)return'<div class="empty">No encounter tables in this view.</div>';return `<div class="encounter-grid">${groups.map(e=>{const v=encounterMethodVisual(e.method);return `<div class="method-table enc-kind-${v.kind}"><div class="method-title"><span class="method-title-main"><span class="enc-method-icon">${v.icon}</span><span class="method-title-label">${esc(v.label)}</span></span><small>${(e.rows||[]).length}</small></div><table class="dense-table encounter-table"><thead><tr><th class="chance">%</th><th>Pokémon</th><th class="level">Lv.</th></tr></thead><tbody>${(e.rows||[]).map(r=>{const p=findPokemonByName(r['Pokémon']);return `<tr><td class="chance">${esc(r.Chance||'—')}</td><td><div class="moncell">${p?spriteHtml(p.baseName,p.baseDex,'table-sprite'):''}${monButton(r['Pokémon'])}</div></td><td class="level">${esc(r.Level||'—')}</td></tr>`}).join('')}</tbody></table></div>`}).join('')}</div>`}
 function renderLocationSub(l){if(locState.sub==='pokemon')return `<div class="method-tabs"><button class="subtab ${locState.time==='all'?'active':''}" data-time="all">All</button><button class="subtab ${locState.time==='morning'?'active':''}" data-time="morning">🌅 Morning</button><button class="subtab ${locState.time==='day'?'active':''}" data-time="day">☀️ Day</button><button class="subtab ${locState.time==='night'?'active':''}" data-time="night">🌙 Night</button></div>${encounterTables(l)}${l.gifts.length?`<div class="method-title">Gifts & one-time encounters</div><table class="dense-table"><thead><tr><th>Pokémon</th><th>Kind</th><th>Level</th></tr></thead><tbody>${l.gifts.map(i=>GIFTS[i]).filter(Boolean).map(g=>{const p=findPokemonByName(g.pokemon);return `<tr><td><div class="moncell">${p?spriteHtml(p.baseName,p.baseDex,'table-sprite'):''}${monButton(g.pokemon)}</div></td><td>${esc(g.kind)}</td><td>${esc(g.level)}</td></tr>`}).join('')}</tbody></table>`:''}`;if(locState.sub==='items'){const arr=l.items.map(i=>ITEMS[i]).filter(Boolean);return arr.length?`<table class="dense-table"><thead><tr><th>Item</th><th>Source</th><th>Qty / price</th></tr></thead><tbody>${arr.map(i=>`<tr><td><button class="linkbtn" data-item="${esc(i.item)}">${esc(i.item)}</button></td><td>${esc(i.category)} • ${esc(i.kind||'')}</td><td>${esc(i.qty||i.price||'—')}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">No items mapped here.</div>'}const tu=l.tutors.map(i=>TUTORS[i]).filter(Boolean),tr=l.trades.map(i=>TRADES[i]).filter(Boolean);return `<div class="info-grid">${tu.map(t=>`<div class="info-card"><h4>Tutor</h4>${moveButton(t.move)} ${chip(t.type)}<br>${esc(t.payment)}</div>`).join('')}${tr.map(t=>`<div class="info-card"><h4>Trade</h4>${monButton(t.give)} → ${monButton(t.get)}<br>${esc(t.nickname)} • ${esc(t.ability)}</div>`).join('')}${!tu.length&&!tr.length?'<div class="note">No tutors or trades mapped here.</div>':''}</div>`}
 function renderLocationDetail(l){if(!['pokemon','items','extras'].includes(locState.sub))locState.sub='pokemon';return `<div class="detail-inner">${detailHeader('locations',`${esc(l.region)} • ${esc(l.kind)}`,l.name)}<div class="loc-tabs"><button class="subtab ${locState.sub==='pokemon'?'active':''}" data-loc-sub="pokemon">Pokémon (${l.wildCount})</button><button class="subtab ${locState.sub==='items'?'active':''}" data-loc-sub="items">Items (${l.items.length})</button><button class="subtab ${locState.sub==='extras'?'active':''}" data-loc-sub="extras">Extras</button></div><div id="locSubBody">${renderLocationSub(l)}</div></div>`}
 function selectLocation(name,fromNav=false){const l=locationByName.get(name);if(!l)return;selection.locations=l.name;$('#locDetail').innerHTML=renderLocationDetail(l);applyLocations();if(fromNav)scrollSelected('locations',`#locList [data-location="${CSS.escape(l.name)}"]`)}

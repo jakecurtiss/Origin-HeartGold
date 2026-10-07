@@ -1,8 +1,11 @@
-Origin HeartGold Companion v6.3
+Origin HeartGold Companion v6.4
 
-- Added iOS safe-area support for Dynamic Island / notch in landscape and standalone modes.
-- Prevented horizontal viewport overflow and detail-pane clipping.
-- Reduced landscape master-pane width so detail content fits more naturally on iPhone Pro-sized screens.
-- Added an extra ultra-short landscape breakpoint for Safari with browser chrome visible.
-- Header height now also responds to Visual Viewport changes on iOS.
-- No Pokédex, encounter, move, evolution, trainer, item or buff data changed.
+Locations density pass:
+- 3 encounter columns by default; 4 on wide desktop views.
+- Phone landscape retains 3 compact columns.
+- Encounter rows reduced in height with smaller sprites and tighter typography.
+- Grass/cave encounters remain first via existing encounter priority logic.
+- Encounter-method headers now have category colours and inline icons:
+  grass/cave, surfing, fishing rods, Rock Smash, Headbutt, radio, swarms.
+- Simplified long encounter labels for faster scanning.
+- No Pokédex, evolution, buff, trainer, move or item data changed.
