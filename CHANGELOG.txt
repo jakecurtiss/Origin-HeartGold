@@ -1,11 +1,8 @@
-Origin HeartGold Companion v6.4
+Origin HeartGold Companion v6.5
 
-Locations density pass:
-- 3 encounter columns by default; 4 on wide desktop views.
-- Phone landscape retains 3 compact columns.
-- Encounter rows reduced in height with smaller sprites and tighter typography.
-- Grass/cave encounters remain first via existing encounter priority logic.
-- Encounter-method headers now have category colours and inline icons:
-  grass/cave, surfing, fishing rods, Rock Smash, Headbutt, radio, swarms.
-- Simplified long encounter labels for faster scanning.
-- No Pokédex, evolution, buff, trainer, move or item data changed.
+- Full alternate-form naming audit across all 415 form records.
+- Regional, Mega, Primal, G-Max, cosmetic and battle-state forms now use descriptive names where safely identifiable.
+- Form-specific sprite lookup added, with safe base-sprite fallback.
+- Galarian Darumaka encounter naming repaired in Ice Path.
+- Intentionally leaves only Necrozma (form 4) and encounter-only Mightyena (form 1) generic because the supplied data does not support a safe unique identification.
+- Premium stat-bar redesign with tier colours, segmented tracks, cleaner values and inline stat deltas.

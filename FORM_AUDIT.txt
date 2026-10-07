@@ -1,0 +1,13 @@
+Origin HeartGold Companion v6.5 — Form audit
+
+• Reviewed all 415 alternate-form Pokédex records in the supplied Origin HeartGold v4.0.3 data.
+• 414/415 Pokédex form records now have descriptive form names (regional, Mega, Primal, G-Max, battle-state, cosmetic, etc.).
+• One Pokédex record is intentionally left generic: Necrozma (form 4). Its extracted data duplicates Ultra Necrozma closely enough that assigning a distinct official name would be guesswork.
+• One encounter-only label remains generic: Mightyena (form 1) on Route 45. There is no corresponding form record in the supplied Pokédex data, so it cannot be identified safely from the available data.
+• The encounter-only Darumaka (form 1) in Ice Path has been resolved to Galarian Darumaka from the encounter context.
+• Form entries now request form-specific sprites first. If the public sprite source has no matching asset, the site falls back to a safe base-species sprite rather than a broken image.
+• Custom Origin HeartGold forms such as Crystal Onix / Armored Mewtwo may use fallback sprites if the exact hack-specific sprite is not available from the public sprite source.
+
+Visual update
+• Reworked Pokémon stat bars into compact, tier-coloured scanner bars with subtle segmentation, glow, cleaner values, and inline buff/nerf deltas.
+• Landscape sizing remains intentionally compact for iPhone use.
