@@ -1,10 +1,8 @@
-Origin HeartGold Companion v6.2
-- Rebuilt typography scale and reduced font clashes
-- Much denser Dex and Moves master lists
-- Circular type icons from the supplied 18-type icon sheet
-- Type icons replace text pills in compact Pokémon/move list contexts
-- Redesigned Moves detail view with compact Power/Accuracy/PP/Class strip
-- Move effect text loads on demand from PokeAPI and caches locally
-- Learner lists are four consistent compact panels
-- Pokémon movesets are smaller, readable and use type + HGSS category icons
-- General density/spacing pass across details, evolutions and tables
+Origin HeartGold Companion v6.3
+
+- Added iOS safe-area support for Dynamic Island / notch in landscape and standalone modes.
+- Prevented horizontal viewport overflow and detail-pane clipping.
+- Reduced landscape master-pane width so detail content fits more naturally on iPhone Pro-sized screens.
+- Added an extra ultra-short landscape breakpoint for Safari with browser chrome visible.
+- Header height now also responds to Visual Viewport changes on iOS.
+- No Pokédex, encounter, move, evolution, trainer, item or buff data changed.
