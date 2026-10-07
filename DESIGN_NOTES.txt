@@ -1,16 +1,11 @@
-Origin HeartGold Companion v7.0 — Pokégear Field System
+Origin HeartGold Companion v7.1
 
-COSMETIC REBUILD ONLY
-- Built directly on the v6.5 audited layout/data.
-- No Pokémon, encounter, evolution, move, trainer, item, form or acquisition data changed.
-- No navigation, pane sizing, safe-area, density or responsive behaviour intentionally changed.
+Left-rail refinement on top of v7.0.
 
-VISUAL DIRECTION
-- HGSS/Pokégear-inspired field terminal rather than a generic web dashboard.
-- Warm HeartGold metal + cream primary accents.
-- Cool cyan/teal LCD accents for the secondary screen language.
-- Hardware-style header emblem, finder pane, scanner panels and cartridge-like sections.
-- Pokédex hero now reads as a scanner surface.
-- Stat bars are segmented meters with the existing stat-tier colours retained.
-- Tables, encounter boards, moves, trainer cards and team builder use one cohesive dark field-system visual language.
-- Landscape reference mode deliberately keeps v6.5 density and iPhone safe-area behaviour.
+- Preserves the v7.0 Pokégear Field System cosmetic design.
+- Preserves v6.5/v7 data, navigation, encounter density and iPhone safe areas.
+- Rebalances Pokédex list columns so names and type icons stay on one line.
+- Pokémon names scale down progressively based on name length instead of being prematurely ellipsised.
+- Tightens number, sprite and BST columns in iPhone landscape without widening the master pane.
+- Keeps circular type icons directly inline with Pokémon names.
+- Service-worker cache bumped to ohg-v7-1.
