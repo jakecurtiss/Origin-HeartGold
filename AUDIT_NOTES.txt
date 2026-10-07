@@ -1,0 +1,18 @@
+Origin HeartGold Companion v5.4 integrity pass
+
+Evolution data:
+- 1,440 Pokémon/form entries checked.
+- 536 directed evolution links resolved.
+- Every evolution link has a matching reciprocal evolves-from/evolves-into entry.
+- 0 unresolved evolution references after fixing nested-condition parsing.
+- 0 directed cycles found.
+- 14 entries whose special-condition text had been split at semicolons were repaired during build.
+- Evolution display now follows directed evolution depth rather than Pokédex number.
+
+Buff/stat comparison:
+- The previous embedded 'official' baseline was found to be corrupted/inaccurate.
+- v5.4 removes that baseline completely.
+- Base species #1-1025 now load current official base stats from the PokeAPI pokemon_stats.csv dataset.
+- The dataset must contain all 1,025 species before any deltas are applied.
+- Stats are cached locally after the first successful load.
+- Forms #1026-1440 are deliberately excluded from buff deltas until form-to-official-form mapping is verified.
