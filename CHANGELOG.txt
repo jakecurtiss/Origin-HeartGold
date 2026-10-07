@@ -1,0 +1,7 @@
+Origin HeartGold Companion v6.1
+
+- Removed Trainers from Location sub-navigation and location summaries. Trainers remain available in the dedicated Trainers tab.
+- Increased Pokémon moveset font size/weight while retaining the compact two-column layout.
+- Replaced P/S/status shorthand with the official 32x14 HGSS / Generation IV Physical, Special and Status category sprites from Bulbagarden Archives.
+- Applied the category icons in compact Pokémon movesets, move browsing and trainer move chips.
+- Bumped service-worker cache for reliable deployment.
