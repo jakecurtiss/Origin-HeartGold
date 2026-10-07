@@ -1,0 +1,24 @@
+Origin HeartGold Companion v6.0 — visual redesign
+
+This is a design-only rebuild on top of the audited v5.4 data and navigation.
+
+Preserved:
+- two-pane master/detail navigation
+- independent scrolling
+- portrait list/detail behaviour
+- compact landscape mode
+- encounter table density/order
+- evolution graph fixes
+- audited buff/stat comparison system
+- all cross-links and team builder behaviour
+
+Changed:
+- complete colour/token system
+- branded header and navigation
+- denser, more deliberate finder-pane states
+- premium detail headers / section hierarchy
+- cohesive dark stat scanner
+- DS-era data-table treatment
+- restyled move, evolution, trainer, item and team components
+- reduced pill/card/dashboard styling
+- subtle texture / metallic-gold accent language
